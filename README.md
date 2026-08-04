@@ -21,7 +21,7 @@
 
 <br/>
 
-<video src="docs/demo.mp4" controls="controls" muted="muted" style="max-width: 100%; width: 800px;"></video><br/><br/>
+<video src="https://github.com/navidseyedain/ALAD/raw/main/docs/demo.mp4" controls="controls" muted="muted" style="max-width: 100%; width: 800px;"></video><br/><br/>
 
 </div>
 
