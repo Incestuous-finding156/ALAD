@@ -7,7 +7,7 @@
 <p><strong>Real-time AI voice dubbing for any Chrome tab, powered by Google's Gemini 3.5 Live Translate.</strong></p>
 
 <p>
-  <a href="https://github.com/yourusername/ALAD/stargazers"><img src="https://img.shields.io/github/stars/yourusername/ALAD?style=for-the-badge&color=FFD700" alt="Stars"></a>
+  <a href="https://github.com/navidseyedain/ALAD/stargazers"><img src="https://img.shields.io/github/stars/navidseyedain/ALAD?style=for-the-badge&color=FFD700" alt="Stars"></a>
   <img src="https://img.shields.io/badge/Chrome%20Extension-Manifest%20V3-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Manifest V3">
   <img src="https://img.shields.io/badge/Powered%20By-Gemini%203.5%20Live-00C896?style=for-the-badge&logo=google&logoColor=white" alt="Gemini">
   <img src="https://img.shields.io/badge/Languages-78-blueviolet?style=for-the-badge" alt="78 Languages">
