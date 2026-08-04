@@ -1,8 +1,8 @@
-<div align="center">
-  🌐 <a href="README.md">Read in English</a> | <strong>خواندن به زبان فارسی</strong>
+<div align="center" dir="rtl">
+  🌐 <a href="README.md" dir="ltr">Read in English</a> | <strong>خواندن به زبان فارسی</strong>
 </div>
 
-<div align="center">
+<div align="center" dir="rtl">
 
 <img src="icons/icon.png" alt="ALAD Logo" width="120" />
 
@@ -10,7 +10,7 @@
 
 <p><strong>دوبله زنده و بلادرنگ با هوش مصنوعی برای تمام تب‌های کروم، با قدرت گوگل Gemini 3.5 Live.</strong></p>
 
-<p>
+<p dir="ltr">
   <a href="https://github.com/navidseyedain/ALAD/stargazers"><img src="https://img.shields.io/github/stars/navidseyedain/ALAD?style=for-the-badge&color=FFD700" alt="Stars"></a>
   <img src="https://img.shields.io/badge/Chrome%20Extension-Manifest%20V3-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Manifest V3">
   <img src="https://img.shields.io/badge/Powered%20By-Gemini%203.5%20Live-00C896?style=for-the-badge&logo=google&logoColor=white" alt="Gemini">
@@ -19,7 +19,7 @@
 </p>
 
 <p>
-  <b dir="rtl">هر ویدیویی را تماشا کنید. آن را فوراً به زبان خودتان بشنوید.</b><br/>
+  <b>هر ویدیویی را تماشا کنید. آن را فوراً به زبان خودتان بشنوید.</b><br/>
   بدون نیاز به اشتراک. بدون نیاز به ساخت اکانت. ۱۰۰٪ رایگان و اوپن‌سورس.
 </p>
 
@@ -33,7 +33,11 @@
 
 ---
 
+<div dir="rtl">
+
 ## 🎬 عملکرد افزونه را ببینید
+
+</div>
 
 <!-- TODO: Drag and drop demo.mp4 here in the GitHub Web Editor -->
 
@@ -125,14 +129,20 @@
 > ⚠️ افزونه ALAD هنوز در Chrome Web Store منتشر نشده است. برای نصب دستی مراحل زیر را دنبال کنید:
 
 ۱. **این ریپازیتوری را دانلود یا کلون کنید:**
-   ```bash
-   git clone https://github.com/navidseyedain/ALAD.git
-   ```
-۲. مرورگر کروم را باز کرده و به آدرس `chrome://extensions/` بروید.
-۳. گزینه **Developer mode** را (در گوشه بالا سمت راست) فعال کنید.
-۴. روی دکمه **Load unpacked** کلیک کنید.
-۵. پوشه پروژه `ALAD` را انتخاب کنید.
-۶. ✅ آیکون ALAD در نوار ابزار شما ظاهر می‌شود — برای دسترسی راحت‌تر آن را **پین (Pin)** کنید.
+
+</div>
+
+```bash
+git clone https://github.com/navidseyedain/ALAD.git
+```
+
+<div dir="rtl">
+
+۲. مرورگر کروم را باز کرده و به آدرس <code dir="ltr">chrome://extensions/</code> بروید.
+<br>۳. گزینه **Developer mode** را (در گوشه بالا سمت راست) فعال کنید.
+<br>۴. روی دکمه **Load unpacked** کلیک کنید.
+<br>۵. پوشه پروژه <code dir="ltr">ALAD</code> را انتخاب کنید.
+<br>۶. ✅ آیکون ALAD در نوار ابزار شما ظاهر می‌شود — برای دسترسی راحت‌تر آن را **پین (Pin)** کنید.
 
 ---
 
@@ -142,21 +152,21 @@
 افزونه ALAD از Gemini API استفاده می‌کند. برای دریافت کلید رایگان خود:
 
 ۱. به **[Google AI Studio](https://aistudio.google.com/app/apikey)** بروید.
-۲. با اکانت گوگل خود وارد شوید.
-۳. روی **"Create API Key"** کلیک کرده و کلید تولید شده را کپی کنید.
+<br>۲. با اکانت گوگل خود وارد شوید.
+<br>۳. روی **"Create API Key"** کلیک کرده و کلید تولید شده را کپی کنید.
 
 > 💡 محدودیت طرح رایگان گوگل بسیار سخاوتمندانه است و برای استفاده روزمره شخصی کاملاً کافی است.
 
 ### مرحله ۲ — پیکربندی ALAD
 ۱. روی آیکون ALAD در نوار ابزار کروم کلیک کنید.
-۲. در پایین پاپ‌آپ، کنار عبارت *Gemini API key* روی **"Show"** کلیک کنید.
-۳. کلید خود را جای‌گذاری (Paste) کرده و روی **Save** کلیک کنید.
+<br>۲. در پایین پاپ‌آپ، کنار عبارت <em>Gemini API key</em> روی **"Show"** کلیک کنید.
+<br>۳. کلید خود را جای‌گذاری (Paste) کرده و روی **Save** کلیک کنید.
 
 ### مرحله ۳ — شروع دوبله
 ۱. به هر تبی که در حال پخش صداست بروید (مثل یوتیوب، پادکست و...).
-۲. زبان مقصد خود را از لیست انتخاب کنید (مثلاً Persian).
-۳. روی **"Start dubbing"** کلیک کنید.
-۴. صدای اصلی بی‌صدا می‌شود — و هوش مصنوعی کنترل را به دست می‌گیرد! 🎙️
+<br>۲. زبان مقصد خود را از لیست انتخاب کنید (مثلاً Persian).
+<br>۳. روی **"Start dubbing"** کلیک کنید.
+<br>۴. صدای اصلی بی‌صدا می‌شود — و هوش مصنوعی کنترل را به دست می‌گیرد! 🎙️
 
 ### مرحله ۴ — توقف
 روی **"Stop dubbing"** کلیک کنید تا صدای اصلی ویدیو بازگردد. اطلاعات این نشست به طور خودکار در بخش آمارهای شما ذخیره می‌شود.
@@ -164,6 +174,8 @@
 ---
 
 ## 🧠 این افزونه چگونه کار می‌کند؟
+
+</div>
 
 ```mermaid
 flowchart TD
@@ -192,18 +204,24 @@ flowchart TD
     Offscreen -- "Play dubbed audio" --> AudioCtx
 ```
 
+<div dir="rtl">
+
+<br>
+
 | بخش | تکنولوژی | هدف |
-|-----------|-----------|---------|
-| **ضبط صدا** | `chrome.tabCapture` + Offscreen Document | ضبط استریم صوتی هر تب مرورگر |
-| **مدل هوش مصنوعی** | `gemini-3.5-live-translate-preview` | ترجمه و تبدیل گفتار دوطرفه به صورت بلادرنگ |
-| **پروتکل ارتباطی** | WebSocket (`BidiGenerateContent`) | استریم بی‌وقفه با کمترین تأخیر |
-| **پخش صدا** | Web Speech API / AudioContext | پخش صدای دوبله‌شده برای کاربر |
-| **ردیابی نشست‌ها** | `chrome.storage.local` | ذخیره تا ۲۰۰۰ نشست به صورت محلی |
-| **همگام‌سازی تنظیمات** | `chrome.storage.sync` | ذخیره کلید API و زبان انتخابی در اکانت مرورگر |
+|:---:|:---:|:---|
+| **ضبط صدا** | <code dir="ltr">chrome.tabCapture</code> | ضبط استریم صوتی هر تب مرورگر |
+| **مدل هوش مصنوعی** | <code dir="ltr">gemini-3.5-live</code> | ترجمه و تبدیل گفتار دوطرفه به صورت بلادرنگ |
+| **پروتکل ارتباطی** | <code dir="ltr">WebSocket</code> | استریم بی‌وقفه با کمترین تأخیر |
+| **پخش صدا** | <code dir="ltr">AudioContext</code> | پخش صدای دوبله‌شده برای کاربر |
+| **ردیابی نشست‌ها** | <code dir="ltr">chrome.storage.local</code> | ذخیره تا ۲۰۰۰ نشست به صورت محلی |
+| **تنظیمات** | <code dir="ltr">chrome.storage.sync</code> | ذخیره کلید API در اکانت مرورگر |
 
 ---
 
 ## 📁 ساختار پروژه
+
+</div>
 
 ```text
 ALAD/
@@ -229,17 +247,19 @@ ALAD/
 └── docs/                  # اسکرین‌شات‌ها برای فایل README
 ```
 
+<div dir="rtl">
+
 ---
 
 ## 🔧 عیب‌یابی (Troubleshooting)
 
 | مشکل | راه‌حل |
-|---------|----------|
+|:---|:---|
 | **صدا بعد از شروع پخش نمی‌شود** | مطمئن شوید که تب در حال پخش صداست. بررسی کنید کلید API شما معتبر باشد و سهمیه آن تمام نشده باشد. |
-| **خطای "WebSocket connection failed"** | ممکن است کلید API شما اشتباه باشد. سعی کنید یک کلید جدید در [AI Studio](https://aistudio.google.com/app/apikey) بسازید. |
-| **داشبورد آمار خالی است** | نشست‌ها تنها زمانی ثبت می‌شوند که دوبله را متوقف (Stop) کنید (حداقل باید ۳ ثانیه طول بکشد). یک نشست کوتاه انجام دهید و صفحه آمار را رفرش کنید. |
-| **صدای اصلی ویدیو بی‌صدا (Mute) نمی‌شود** | برخی از پلیرهای وب اجازه بی‌صدا کردن با جاوا اسکریپت را نمی‌دهند. صفحه را رفرش کنید و دوباره امتحان کنید. |
-| **آیکون افزونه نمایش داده نمی‌شود** | افزونه را در تب `chrome://extensions/` ری‌لود (Reload) کنید تا کش آیکون پاک شود. |
+| **خطای WebSocket** | ممکن است کلید API شما اشتباه باشد. سعی کنید یک کلید جدید در <a href="https://aistudio.google.com/app/apikey">AI Studio</a> بسازید. |
+| **داشبورد آمار خالی است** | نشست‌ها تنها زمانی ثبت می‌شوند که دوبله را متوقف (Stop) کنید. یک نشست انجام دهید و صفحه آمار را رفرش کنید. |
+| **صدای اصلی ویدیو قطع نمی‌شود** | برخی از پلیرهای وب اجازه بی‌صدا کردن با جاوا اسکریپت را نمی‌دهند. صفحه را رفرش کنید و دوباره امتحان کنید. |
+| **آیکون افزونه نمایش داده نمی‌شود** | افزونه را در تب <code dir="ltr">chrome://extensions/</code> ری‌لود (Reload) کنید تا کش آیکون پاک شود. |
 
 ---
 
@@ -258,16 +278,16 @@ ALAD/
 از هرگونه مشارکت، گزارش باگ یا پیشنهاد قابلیت جدید استقبال می‌شود!
 
 ۱. ریپازیتوری را فورک (Fork) کنید.
-۲. برنچ فیچر خود را بسازید: `git checkout -b feature/AmazingFeature`
-۳. تغییرات را کامیت کنید: `git commit -m 'feat: add AmazingFeature'`
-۴. تغییرات را روی گیت‌هاب خود پوش کنید: `git push origin feature/AmazingFeature`
-۵. یک Pull Request باز کنید.
+<br>۲. برنچ فیچر خود را بسازید: <code dir="ltr">git checkout -b feature/AmazingFeature</code>
+<br>۳. تغییرات را کامیت کنید: <code dir="ltr">git commit -m 'feat: add AmazingFeature'</code>
+<br>۴. تغییرات را روی گیت‌هاب خود پوش کنید: <code dir="ltr">git push origin feature/AmazingFeature</code>
+<br>۵. یک Pull Request باز کنید.
 
 ---
 
 ## 📜 لایسنس
 
-این پروژه تحت لایسنس **MIT** منتشر شده است. برای اطلاعات بیشتر فایل `LICENSE` را ببینید.
+این پروژه تحت لایسنس **MIT** منتشر شده است. برای اطلاعات بیشتر فایل <code dir="ltr">LICENSE</code> را ببینید.
 
 ---
 
@@ -278,9 +298,9 @@ ALAD/
 
 ---
 
-<div align="center">
-  <p>اگر ALAD شما را حتی برای یک ویدیو از خواندن زیرنویس‌ها نجات داد — با دادن یک ⭐ از ما حمایت کنید!</p>
-  <strong>ساخته شده با ❤️ برای تمام زبان‌آموزان، جهانگردان و ذهن‌های کنجکاو در سراسر دنیا.</strong>
 </div>
 
+<div align="center" dir="rtl">
+  <p>اگر ALAD شما را حتی برای یک ویدیو از خواندن زیرنویس‌ها نجات داد — با دادن یک ⭐ از ما حمایت کنید!</p>
+  <strong>ساخته شده با ❤️ برای تمام زبان‌آموزان، جهانگردان و ذهن‌های کنجکاو در سراسر دنیا.</strong>
 </div>
