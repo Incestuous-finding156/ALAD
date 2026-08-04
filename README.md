@@ -31,8 +31,7 @@
 
 ## 🎬 See it in action
 
-<video src="./docs/demo.mp4" controls width="100%">
-</video>
+<!-- TODO: Drag and drop demo.mp4 here in the GitHub Web Editor -->
 
 ---
 
