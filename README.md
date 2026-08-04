@@ -163,25 +163,25 @@ Click **"Stop dubbing"** to restore original audio. The session is automatically
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     ALAD Architecture                        │
+│                     ALAD Architecture                       │
 ├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  [Active Tab]                                                │
-│       │  tabCapture API (MediaStream)                        │
-│       ▼                                                      │
-│  [Offscreen Document]                                        │
-│       │  PCM 16kHz chunks (Base64)                           │
-│       │                                                      │
-│       ├──► [WebSocket: Gemini 3.5 Live Translate]            │
-│       │         ▲ Audio in (PCM 16kHz)                       │
-│       │         ▼ Translated audio out (PCM 24kHz)           │
-│       │                                                      │
-│  [AudioContext]  ◄── Decode & play dubbed audio              │
-│                                                              │
-│  [Background Service Worker]                                 │
-│       ├── Manages session lifecycle & status                 │
+│                                                             │
+│  [Active Tab]                                               │
+│       │  tabCapture API (MediaStream)                       │
+│       ▼                                                     │
+│  [Offscreen Document]                                       │
+│       │  PCM 16kHz chunks (Base64)                          │
+│       │                                                     │
+│       ├──► [WebSocket: Gemini 3.5 Live Translate]           │
+│       │         ▲ Audio in (PCM 16kHz)                      │
+│       │         ▼ Translated audio out (PCM 24kHz)          │
+│       │                                                     │
+│  [AudioContext]  ◄── Decode & play dubbed audio             │
+│                                                             │
+│  [Background Service Worker]                                │
+│       ├── Manages session lifecycle & status                │
 │       └── Persists stats → chrome.storage.local             │
-│                                                              │
+│                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
