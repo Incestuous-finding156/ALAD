@@ -1,5 +1,8 @@
 <div align="center">
+  🌐 <strong>Read in English</strong> | <a href="README-fa.md">خواندن به زبان فارسی</a>
+</div>
 
+<div align="center">
 <img src="icons/icon.png" alt="ALAD Logo" width="120" />
 
 <h1>🎙️ ALAD — AI Live Audio Dubbing</h1>
