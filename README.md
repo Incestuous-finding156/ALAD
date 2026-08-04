@@ -31,7 +31,7 @@
 
 ## 🎬 See it in action
 
-https://github.com/navidseyedain/ALAD/raw/main/docs/demo.mp4
+<video src="docs/demo.mp4" controls="controls"></video>
 
 ---
 
