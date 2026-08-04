@@ -122,7 +122,7 @@ A full analytics page — stored **100% locally** on your device.
 
 1. **Download or clone this repository:**
    ```bash
-   git clone https://github.com/yourusername/ALAD.git
+   git clone https://github.com/navidseyedain/ALAD.git
    ```
 2. Open Chrome and navigate to `chrome://extensions/`
 3. Enable **Developer mode** (toggle in the top-right corner)
