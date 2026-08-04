@@ -171,28 +171,31 @@ Click **"Stop dubbing"** to restore original audio. The session is automatically
 
 ## 🧠 How It Works
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     ALAD Architecture                       │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  [Active Tab]                                               │
-│       │  tabCapture API (MediaStream)                       │
-│       ▼                                                     │
-│  [Offscreen Document]                                       │
-│       │  PCM 16kHz chunks (Base64)                          │
-│       │                                                     │
-│       ├──► [WebSocket: Gemini 3.5 Live Translate]           │
-│       │         ▲ Audio in (PCM 16kHz)                      │
-│       │         ▼ Translated audio out (PCM 24kHz)          │
-│       │                                                     │
-│  [AudioContext]  ◄── Decode & play dubbed audio             │
-│                                                             │
-│  [Background Service Worker]                                │
-│       ├── Manages session lifecycle & status                │
-│       └── Persists stats → chrome.storage.local             │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph Browser
+        Tab[Active Tab]
+        Worker[Background Service Worker]
+        Storage[(chrome.storage.local)]
+        
+        subgraph Audio Pipeline
+            Offscreen[Offscreen Document]
+            AudioCtx[AudioContext]
+        end
+    end
+
+    subgraph Cloud
+        Gemini((Gemini 3.5 Live API))
+    end
+
+    Tab -- "tabCapture (MediaStream)" --> Offscreen
+    Worker -. "Manages lifecycle" .-> Offscreen
+    Worker -. "Saves sessions" .-> Storage
+    
+    Offscreen -- "Audio in (PCM 16kHz)" --> Gemini
+    Gemini -- "Translated audio (PCM 24kHz)" --> Offscreen
+    
+    Offscreen -- "Play dubbed audio" --> AudioCtx
 ```
 
 | Component | Technology | Purpose |
