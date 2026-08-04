@@ -1,12 +1,12 @@
-// scripts/offscreen.js — Rewritten to match LivDub's audio capture & playback architecture
+// scripts/offscreen.js — Audio capture & playback architecture
 
 let stream = null;
 let captureCtx = null;     // AudioContext for CAPTURE (native sample rate)
-let playbackCtx = null;    // AudioContext for PLAYBACK (24kHz like LivDub)
+let playbackCtx = null;    // AudioContext for PLAYBACK (24kHz)
 let monitorGain = null;
 let cleanupCapture = null;
 
-// Playback state (matching LivDub's gapless scheduling)
+// Playback state (gapless scheduling)
 let scheduledSources = [];
 let scheduledOutputEndTime = 0;
 let startedPlaying = false;
@@ -14,9 +14,9 @@ let queuedPcm = [];
 let queuedSamples = 0;
 let playbackSampleRate = 24000;
 
-const CHUNK_MS = 100;        // LivDub uses 100ms chunks
+const CHUNK_MS = 100;        // 100ms chunks
 const TARGET_RATE = 16000;   // Gemini expects 16kHz input
-const BUFFER_BEFORE_PLAY_MS = 180;  // LivDub buffers 180ms before playing
+const BUFFER_BEFORE_PLAY_MS = 180;  // buffer 180ms before playing
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === 'START_CAPTURE') {
@@ -33,7 +33,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 });
 
-// ─── Base64 helpers (identical to LivDub) ──────────────────────
+// ─── Base64 helpers ─────────────────────────────────────────
 function arrayBufferToBase64(buffer) {
   const bytes = new Uint8Array(buffer);
   let binary = '';
@@ -52,7 +52,7 @@ function base64ToArrayBuffer(b64) {
   return buf.buffer;
 }
 
-// ─── Resample Float32 from srcRate to dstRate (LivDub algorithm) ─
+// ─── Resample Float32 from srcRate to dstRate ──────────────────
 function resample(input, srcRate, dstRate) {
   if (dstRate === srcRate) return input;
   const ratio = srcRate / dstRate;
@@ -68,7 +68,7 @@ function resample(input, srcRate, dstRate) {
   return output;
 }
 
-// ─── Float32 → Int16 PCM (LivDub algorithm) ─────────────────────
+// ─── Float32 → Int16 PCM ──────────────────────────────────────
 function float32ToInt16(float32) {
   const int16 = new Int16Array(float32.length);
   for (let i = 0; i < float32.length; i++) {
@@ -93,11 +93,11 @@ async function startCapture(streamId) {
       video: false
     });
 
-    // Create capture AudioContext at NATIVE sample rate (like LivDub)
+    // Create capture AudioContext at NATIVE sample rate
     captureCtx = new AudioContext();
     const source = captureCtx.createMediaStreamSource(stream);
     
-    // Monitor gain: let user hear original audio at low volume (like LivDub)
+    // Monitor gain: let user hear original audio at low volume
     monitorGain = captureCtx.createGain();
     monitorGain.gain.value = 0.15; // 15% background volume
     source.connect(monitorGain);
@@ -180,7 +180,7 @@ async function startCapture(streamId) {
 
     if (captureCtx.state === 'suspended') await captureCtx.resume();
 
-    // Create PLAYBACK AudioContext at 24kHz (LivDub does this)
+    // Create PLAYBACK AudioContext at 24kHz
     playbackCtx = new AudioContext({ sampleRate: 24000 });
     if (playbackCtx.state === 'suspended') await playbackCtx.resume();
     resetPlaybackState();
@@ -199,7 +199,7 @@ async function startCapture(streamId) {
   }
 }
 
-// ─── PLAYBACK: Gapless scheduling (LivDub algorithm) ────────────
+// ─── PLAYBACK: Gapless scheduling ─────────────────────────────────
 function resetPlaybackState() {
   stopScheduledSources();
   queuedPcm = [];

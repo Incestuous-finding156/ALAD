@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const s = totalSeconds % 60;
     
     if (h > 0) return `${h}h ${m}m`;
-    if (m > 0) return `${m}m`; // Hide seconds if over 1 min to match LivDub
+    if (m > 0) return `${m}m`; // Hide seconds if over 1 min
     return `${s}s`;
   }
 

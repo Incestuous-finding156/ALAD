@@ -1,4 +1,4 @@
-// services/gemini.js — Rewritten to exactly match LivDub's working WebSocket protocol
+// services/gemini.js — WebSocket protocol implementation
 
 const GEMINI_WS_URL = 'wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent';
 const AUDIO_MIME = 'audio/pcm;rate=16000';
