@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ALAD — Usage Stats</title>
+  <link rel="icon" type="image/png" href="../icons/icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stats-container">
+    <header class="header">
+      <img src="../icons/iconw.png" alt="LAD Logo" class="brand-icon">
+      <div class="brand-text">
+        <span class="brand-name">ALAD (AI Live Audio Dubbing)</span>
+        <h1 class="page-title serif">Usage stats</h1>
+        <p class="subtitle">Dubbing time on this install — local only, not an account.</p>
+      </div>
+    </header>
+
+    <!-- Card 1: Time Dubbed & Heatmap -->
+    <section class="card time-card">
+      <div class="time-card-layout">
+        <!-- Left Side: Numbers -->
+        <div class="time-left">
+          <h2 class="card-title">TIME DUBBED</h2>
+          <div class="time-main">
+            <div id="totalTime" class="time-display serif">0m</div>
+            <div class="time-label" id="timeLabel">across recorded history</div>
+          </div>
+          <div class="time-summary">
+            <span id="totalSessions"><strong class="serif">0</strong> session<span class="plural">s</span></span>
+            <span id="activeDays"><strong class="serif">0</strong> active day<span class="plural">s</span></span>
+            <span id="totalLanguages"><strong class="serif">0</strong> language<span class="plural">s</span></span>
+          </div>
+        </div>
+        
+        <!-- Right Side: Heatmap -->
+        <div class="time-right">
+          <div class="time-controls">
+            <div class="time-filters">
+              <button class="filter-btn" data-days="7">7d</button>
+              <button class="filter-btn" data-days="30">30d</button>
+              <button class="filter-btn" data-days="90">90d</button>
+              <button class="filter-btn active" data-days="all">All</button>
+            </div>
+            
+            <div class="heatmap-legend">
+              <span class="legend-text">Less</span>
+              <div class="legend-boxes">
+                <div class="legend-box l-0"></div>
+                <div class="legend-box l-1"></div>
+                <div class="legend-box l-2"></div>
+                <div class="legend-box l-3"></div>
+                <div class="legend-box l-4"></div>
+              </div>
+              <span class="legend-text">More</span>
+            </div>
+          </div>
+
+          <div class="heatmap-container">
+            <div class="heatmap-months" id="heatmapMonths"></div>
+            <div class="heatmap-body">
+              <div class="heatmap-days">
+                <span></span>
+                <span>M</span>
+                <span></span>
+                <span>W</span>
+                <span></span>
+                <span>F</span>
+                <span></span>
+              </div>
+              <div class="heatmap-grid" id="heatmapGrid"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card 2: Patterns -->
+    <section class="card patterns-card">
+      <div class="card-header">
+        <h2 class="card-title serif title-large">Patterns</h2>
+        <span class="patterns-time-label" id="patternsTimeLabel">All time</span>
+      </div>
+
+      <div class="patterns-grid">
+        <!-- Listening Hours (50%) -->
+        <div class="pattern-col listening-col">
+          <h3 class="col-title">LISTENING HOURS</h3>
+          <div class="listening-chart" id="listeningChart">
+            <!-- 24 bars populated by JS -->
+          </div>
+          <div class="listening-x-axis">
+            <span>00</span>
+            <span>06</span>
+            <span>12</span>
+            <span>18</span>
+            <span>23</span>
+          </div>
+          <div class="listening-footer" id="listeningFooter">
+            Most active around <strong>--:--</strong>
+          </div>
+        </div>
+
+        <!-- Languages (25%) -->
+        <div class="pattern-col lang-col">
+          <h3 class="col-title">LANGUAGES</h3>
+          <div id="languagesList" class="line-bars-container">
+            <div class="empty-state">No data yet</div>
+          </div>
+        </div>
+
+        <!-- Domains (25%) -->
+        <div class="pattern-col domain-col">
+          <h3 class="col-title">DOMAINS</h3>
+          <div id="domainsList" class="line-bars-container">
+            <div class="empty-state">No data yet</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Card -->
+    <section class="card info-card">
+      <div class="card-header">
+        <h2 class="card-title">PRIVACY NOTE</h2>
+      </div>
+      <p class="info-text">All sessions are stored locally on your device. No analytics are sent to any remote servers.</p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

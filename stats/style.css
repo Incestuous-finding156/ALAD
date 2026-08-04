@@ -1,0 +1,451 @@
+/* ── LAD Stats Page - Exact UI Match ── */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: #0f1015; /* Very dark background */
+  color: #c9c9d1;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+.serif {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.stats-container {
+  width: 100%;
+  max-width: 1040px; /* Wider for heatmap and left column */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Header ── */
+.header {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.brand-icon {
+  width: 80px;
+  height: 80px;
+  margin-top: 0;
+  border-radius: 12px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #00c896;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #7a7a8c;
+}
+
+/* ── Cards ── */
+.card {
+  background: #17181f; /* Dark gray */
+  border: 1px solid #23242f;
+  border-radius: 12px;
+  padding: 24px 32px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 24px;
+}
+
+.card-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #7a7a8c;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+.title-large {
+  font-size: 20px;
+  color: #fff;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+.patterns-time-label {
+  font-size: 12px;
+  color: #7a7a8c;
+}
+
+/* ── Time Dubbed Layout ── */
+.time-card-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.time-left {
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+}
+
+.time-left .card-title {
+  margin-bottom: 20px;
+}
+
+/* ── Time Display ── */
+.time-main {
+  flex: 1;
+}
+
+.time-display {
+  font-size: 64px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.time-label {
+  font-size: 13px;
+  color: #7a7a8c;
+}
+
+.time-summary {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: #a0a0b0;
+  margin-top: 32px;
+}
+
+.time-summary strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ── Right Side / Heatmap ── */
+.time-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.time-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* ── Filters ── */
+.time-filters {
+  display: flex;
+  gap: 4px;
+  background: #0f1015;
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid #23242f;
+}
+
+.filter-btn {
+  background: transparent;
+  border: none;
+  color: #7a7a8c;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  color: #a0a0b0;
+}
+
+.filter-btn.active {
+  background: #23242f;
+  color: #fff;
+}
+
+/* ── Legend & Share ── */
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #7a7a8c;
+}
+
+.legend-boxes {
+  display: flex;
+  gap: 3px;
+}
+
+.legend-box {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+/* Heatmap Legend Box Size */
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid #333444;
+  color: #c9c9d1;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: all 0.2s;
+}
+
+.share-btn:hover {
+  background: #23242f;
+  color: #fff;
+}
+
+/* ── Heatmap Grid ── */
+.heatmap-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.heatmap-months {
+  display: flex;
+  margin-left: 24px; /* Offset for day labels */
+  font-size: 10px;
+  color: #7a7a8c;
+  margin-bottom: 8px;
+  position: relative;
+  height: 14px;
+}
+
+.heatmap-months span {
+  position: absolute;
+}
+
+.heatmap-body {
+  display: flex;
+  gap: 8px;
+}
+
+.heatmap-days {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #7a7a8c;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 16px;
+}
+
+.heatmap-grid {
+  display: grid;
+  grid-template-rows: repeat(7, 10px);
+  grid-auto-flow: column;
+  gap: 3px;
+}
+
+.heat-cell {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: #222228;
+}
+
+/* Heatmap Colors */
+.l-0 { background: #222228; }
+.l-1 { background: #133a31; }
+.l-2 { background: #1a6252; }
+.l-3 { background: #00b884; }
+.l-4 { background: #00d69e; }
+
+/* ── Patterns Grid ── */
+.patterns-grid {
+  display: flex;
+  gap: 40px;
+}
+
+.pattern-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.listening-col {
+  flex: 2; /* 50% */
+}
+
+.lang-col, .domain-col {
+  flex: 1; /* 25% each */
+}
+
+.col-title {
+  font-size: 11px;
+  color: #7a7a8c;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* ── Listening Chart ── */
+.listening-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100px;
+  margin-bottom: 8px;
+  border-bottom: 1px dashed #23242f;
+}
+
+.listen-bar-wrap {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 1px;
+}
+
+.listen-bar {
+  width: 100%;
+  max-width: 12px;
+  background: #00c896;
+  border-radius: 2px 2px 0 0;
+  min-height: 2px; /* Empty state line */
+  transition: height 0.5s ease-out;
+}
+
+.listen-bar.empty {
+  background: #23242f;
+}
+
+.listening-x-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #7a7a8c;
+  margin-bottom: 16px;
+}
+
+.listening-footer {
+  font-size: 12px;
+  color: #7a7a8c;
+}
+
+.listening-footer strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ── Line Bars (Languages/Domains) ── */
+.line-bars-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.line-row {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.line-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 8px;
+}
+
+.line-name {
+  font-size: 13px;
+  color: #c9c9d1;
+}
+
+.line-val {
+  font-size: 11px;
+  color: #7a7a8c;
+}
+
+.line-track {
+  height: 2px;
+  background: #23242f;
+  border-radius: 1px;
+  position: relative;
+}
+
+.line-fill {
+  height: 100%;
+  background: #00c896;
+  border-radius: 1px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.5s ease-out;
+}
+
+/* ── Info Card ── */
+.info-card {
+  padding: 20px 32px;
+}
+
+.info-card .card-title {
+  margin-bottom: 16px;
+}
+
+.info-text {
+  font-size: 12px;
+  color: #7a7a8c;
+}
+
+.empty-state {
+  font-size: 12px;
+  color: #7a7a8c;
+  font-style: italic;
+}

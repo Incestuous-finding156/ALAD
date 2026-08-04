@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ALAD (AI Live Audio Dubbing)</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <img src="../icons/iconw.png" alt="ALAD Logo" class="brand-icon">
+        <span class="brand-name">ALAD (AI Live Audio Dubbing)</span>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main">
+      <!-- Language selector + Start button row -->
+      <div class="control-row">
+        <div class="lang-select-wrap">
+          <select id="targetLang" style="display:none;"></select>
+          <div class="custom-select" id="customSelectContainer" tabindex="0">
+            <div class="custom-select-trigger">
+              <span id="customSelectLabel">Persian</span>
+              <svg viewBox="0 0 24 24" class="custom-select-arrow"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+            </div>
+            <div class="custom-options" id="customSelectOptions"></div>
+          </div>
+        </div>
+        <button id="toggleBtn" class="btn-start">Start dubbing</button>
+      </div>
+
+      <!-- Status row (visible when dubbing) -->
+      <div id="statusRow" class="status-row hidden">
+        <span id="statusText" class="status-text">Dubbing</span>
+        <span id="timer" class="timer">0:00</span>
+      </div>
+
+      <!-- Enable for all websites -->
+      <label class="checkbox-row">
+        <input type="checkbox" id="allSites" checked>
+        <span>Enable for all websites</span>
+      </label>
+
+      <!-- Usage stats link -->
+      <div class="stats-row" id="statsBtn">
+        <span class="stats-text">Usage stats</span>
+        <span class="stats-icon">›</span>
+      </div>
+    </main>
+
+    <!-- API Key section -->
+    <footer class="footer">
+      <div class="api-header">
+        <span class="api-label"><strong>Gemini API key</strong> · saved on device</span>
+        <button id="toggleKeyVisibility" class="link-btn">Show</button>
+      </div>
+      <div id="apiKeySection" class="api-section hidden">
+        <input type="password" id="apiKey" class="api-input" placeholder="Paste your API key here">
+        <div class="api-actions">
+          <button id="saveKeyBtn" class="btn-small">Save</button>
+          <button id="clearKeyBtn" class="btn-small btn-clear">Clear</button>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
