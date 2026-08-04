@@ -21,9 +21,7 @@
 
 <br/>
 
-<img src="docs/screenshot-youtube-dubbing.png" alt="ALAD dubbing a YouTube video live" width="800"/>
-
-<br/><br/>
+<video src="docs/demo.mp4" controls="controls" muted="muted" style="max-width: 100%; width: 800px;"></video><br/><br/>
 
 </div>
 
