@@ -31,7 +31,8 @@
 
 ## 🎬 See it in action
 
-<video src="docs/demo.mp4" controls="controls"></video>
+<video src="./docs/demo.mp4" controls width="100%">
+</video>
 
 ---
 
